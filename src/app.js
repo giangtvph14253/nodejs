@@ -28,6 +28,7 @@ app.use("/api", productRoute);
 mongoose.connect("mongodb://localhost:27017/we16310")
     .then(() => console.log("Ket noi DB thanh cong"))
     .catch(error => console.log(error))
+    
 // connect
 const PORT = 8000;
 app.listen(PORT, () => {
