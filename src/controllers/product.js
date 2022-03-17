@@ -23,7 +23,7 @@ export const list = async (req, res) => {
 
 export const get = async (req, res) => {
     try {
-        const product = await Product.findOne({ _id: req.params.id }).exec();
+        const product = await Product.findOne({_id: req.params.id}).exec();
         res.json(product);
     } catch (error) {
         res.status(400).json({
@@ -33,7 +33,7 @@ export const get = async (req, res) => {
 }
 export const remove = async (req, res) => {
     try {
-        const product = await Product.findOneAndDelete({ _id: req.params.id }).exec();
+        const product = await Product.findOneAndDelete({_id: req.params.id}).exec();
         res.json(product);
     } catch (error) {
         res.status(400).json({

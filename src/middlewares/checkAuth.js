@@ -3,6 +3,6 @@ export const checkAuth = (req, res,next) => {
     if(isAdmin){
         next();
     } else {
-        console.log('Error');
+        console.log('Không thể kết nối');
     }
 }
