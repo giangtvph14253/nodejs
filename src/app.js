@@ -9,9 +9,9 @@ import categoryRoute from './routes/category';
 
 const app = express();
 // middleware
-app.use(cors())
-app.use(morgan('tiny'))
-app.use(express.json())
+// app.use(cors())
+// app.use(morgan('tiny'))
+// app.use(express.json())
 
 // routes
 // readdirSync(__dirname + "/routes").forEach((fileName) => {
