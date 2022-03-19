@@ -1,4 +1,5 @@
 import Category from "../models/category"
+import Product from "../models/product"
 
 export const creat = async (req, res) => {
     try {
@@ -8,5 +9,18 @@ export const creat = async (req, res) => {
         res.status(404).json({
             error: "Them thanh cong"
         })
+    }
+}
+
+export const read = async (req, res) => {
+    const condition = { _id: req.params.id };
+    try {
+        const category = await Category.findOne({ _id: req.params.id }).exec();
+        const product = await Product.find({ category }).select('-category').exec();
+        res.json({
+            category, products
+        });
+    } catch (error) {
+
     }
 }
