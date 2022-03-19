@@ -1,6 +1,7 @@
 B1: npm init -i
 B2: npm i --svae-dev nodemon babel-cli babel-preset-env babel-preset-stage-0
     npm i express mongoose
+    npm i morgan
     npm i cors
 B3: Tạo file .babelrc add: { "presets": ["env","stage-0"] }
     Tạo file .gitignore add: node_modules & package-lock.json
