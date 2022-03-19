@@ -1,0 +1,8 @@
+B1: npm init -i
+B2: npm i --svae-dev nodemon babel-cli babel-preset-env babel-preset-stage-0
+    npm i express mongoose
+    npm i cors
+B3: Tạo file .babelrc add: { "presets": ["env","stage-0"] }
+    Tạo file .gitignore add: node_modules & package-lock.json
+    Tạo folder scr -> app.js
+B4: Vào file package.json => "script" add: "start": "nodemon ./src/app.js --exec babel-node -e js"
