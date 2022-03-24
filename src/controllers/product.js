@@ -42,10 +42,11 @@ export const remove = async (req, res) => {
     }
 }
 export const update = async (req, res) => {
-    const condition = { id: req.params.id }
+    const condition = { _id: req.params.id }
     const update = req.body;
+    console.log(req.body)
     try {
-        const product = await Product.findOneAndUpdate(condition, update).exec();
+        const product = await Product.findOneAndUpdate(condition, update,{new:true}).exec();
         res.json(product);
     } catch (error) {
         res.status(400).json({
